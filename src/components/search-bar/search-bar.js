@@ -1,15 +1,15 @@
 import React from 'react';
 import '../../App.css';
 
-const SearchBar = props => (
+const SearchBar = ({ updateSearchTerm, searchTerm, searchForImages }) => (
   <div id="SearchBar">
     <input
       type="text"
       id="InputBar"
       placeholder="Search Imgur for your favorite images"
-      onChange={event => console.log(event.target.value)}
+      onChange={event => updateSearchTerm(event.target.value)}
     />
-    <button id="SubmitButton"> Search Imgur!</button>
+    <button id="SubmitButton" onClick={() => searchForImages(searchTerm)}> Search Imgur!</button>
   </div>
 );
 

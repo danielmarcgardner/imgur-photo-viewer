@@ -1,10 +1,10 @@
-import initialState from '../store/initial-state';
+import { combineReducers } from 'redux';
+import search from './search-reducer';
+import searchResults from './search-results-reducer';
 
-const imgurApp = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
+const imgurApp = combineReducers({
+  search,
+  searchResults,
+});
 
 export default imgurApp;

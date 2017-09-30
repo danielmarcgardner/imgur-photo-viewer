@@ -1,8 +1,10 @@
 const initialState = {
-  fetching: false,
-  page: 0,
-  images: [],
-  searchTerm: '',
+  searchResults: {
+    fetching: false,
+    page: 0,
+    images: [],
+  },
+  search: '',
 };
 
 export default initialState;

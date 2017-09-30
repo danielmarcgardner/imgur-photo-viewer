@@ -1,0 +1,3 @@
+export const UPDATE_SEARCH_TERM = 'UPDATE_SEARCH_TERM';
+export const IMGUR_SEARCH = 'IMGUR_SEARCH';
+export const LOADING = 'LOADING';

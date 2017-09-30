@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import SearchBar from './components/search-bar/search-bar';
+import SearchBar from './components/search-bar/search-bar-container';
 import NavBar from './components/nav-bar/nav-bar';
 
 const App = () => (
