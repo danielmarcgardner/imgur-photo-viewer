@@ -1,28 +1,63 @@
-.App {
-  text-align: center;
+/*NavBar Styling*/
+#NavBar {
+  min-height: 50px;
+  background-color: #34373C;
+  height: fit-content;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.MenuItem {
+  vertical-align: middle;
+  line-height: 50px;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  display: inline;
+  color: #32C837;
+  font-weight: 700;
+  padding-right: 10px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+#Title {
+  margin-left: 2.5%;
+  float: left;
+}
+
+.NavLinks {
+  float: right;
+  margin-right: 5%;
+}
+
+/*Search Bar Styling*/
+
+#SearchBar {
+  margin: auto;
+  width: 50%;
+  margin-top: 25px;
+}
+
+#InputBar {
+  width: 100%;
+  border: 2px solid black;
+  font-family: 'Oswald', sans-serif;
+  color: #86888c;
+  border-radius: 4px;
+  padding-left: 40px;
+  background-image: url('./assets/search-icon.svg');
+  background-repeat: no-repeat;
+}
+
+#SubmitButton {
+  margin: auto;
+  background: #32C837;
   color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 3vh;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+/*@media only screen and (max-width: 485px) {
+  .MenuItem:first-of-type {
+    font-size: 3vw;
+  }
+}*/
