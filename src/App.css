@@ -41,24 +41,63 @@
   font-family: 'Oswald', sans-serif;
   color: #86888c;
   border-radius: 4px;
-  padding-left: 40px;
+  padding-left: 30px;
   background-image: url('./assets/search-icon.svg');
   background-repeat: no-repeat;
+  height: 30px;
+  font-size: 18px;
 }
 
 #SubmitButton {
-  margin: auto;
   background: #32C837;
   color: white;
   border: none;
   border-radius: 3px;
-  font-size: 3vh;
+  font-size: 2vh;
+  margin-top: 5px;
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-bottom: 15px;
+}
+
+/*Styling for the Image Results*/
+
+#ImageResults {
+  margin-top: 15px;
+  height: 1000px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: scroll;
+}
+
+/*Individual Image Card Styling*/
+
+.IndividualCard {
+  width: 250px;
+  height: 360px;
+  margin: auto;
+  border: 2px solid #32C837;
+  background-color: #34373C;
   margin-top: 5px;
 }
 
+.Image {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
-/*@media only screen and (max-width: 485px) {
-  .MenuItem:first-of-type {
-    font-size: 3vw;
-  }
-}*/
+.ImageHeader {
+  width: 240px;
+  height: 350px;
+  margin: 5px;
+}
