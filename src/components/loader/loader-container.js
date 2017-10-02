@@ -6,6 +6,7 @@ import { searchForImages } from '../../redux/actions/thunks';
 const mapStateToProps = state => ({
   fetching: state.searchResults.fetching,
   searchTerm: state.searchResults.searchTerm,
+  noImagesFound: state.searchResults.noImages,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

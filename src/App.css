@@ -4,12 +4,17 @@ button {
   color: white;
   border: none;
   border-radius: 3px;
-  font-size: 2vh;
+  font-size: 20px;
   margin-top: 5px;
-  width: 30%;
-  margin-left: 35%;
-  margin-right: 35%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
   margin-bottom: 15px;
+  font-size-adjust: auto;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 /*NavBar Styling*/
@@ -51,7 +56,7 @@ button {
 
 #InputBar {
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid #34373C;
   font-family: 'Oswald', sans-serif;
   color: #86888c;
   border-radius: 4px;
@@ -93,6 +98,10 @@ button {
   margin-top: 5px;
 }
 
+.IndividualCard:hover {
+  cursor: pointer;
+}
+
 .Image {
   max-width: 100%;
   height: 100%;
@@ -114,5 +123,53 @@ button {
   width:100%;
   height: 100%;
   font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+/*Hero Image Styling*/
+
+#HeroImageContainer {
+  margin: auto;
+  width: 90%;
+  height: 750px;
+  overflow: scroll;
+  border: 2px solid #32C837;
+  background-color: #34373C;
+  margin-top: 50px;
+  color: #32C837;
+  text-align: center;
+}
+
+#HeroImageHeader {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  margin-top: 25px;
+  text-align: center;
+}
+
+#HeroImage {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#HeroTitle {
+  font-size: 36px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#HeroImageContainer > p {
+  margin: 5px
+}
+
+#HeroImageContainer > button {
+  vertical-align: bottom;
+}
+
+#NotFound {
+  margin-top: 50px;
+  vertical-align: middle;
   text-align: center;
 }

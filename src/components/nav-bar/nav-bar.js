@@ -9,12 +9,11 @@ const NavBar = () => (
       </div>
     </div>
     <div className="NavLinks">
-      <div className="MenuItem">
+      <a href="https://github.com/danielmarcgardner/imgur-photo-viewer">
+        <div className="MenuItem">
         GitHub Code
-      </div>
-      <div className="MenuItem">
-        Imgur
-      </div>
+        </div>
+      </a>
     </div>
   </div>
 );

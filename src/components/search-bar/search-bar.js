@@ -13,7 +13,7 @@ const SearchBar = ({ searchForImages }) => (
         id="InputBar"
         placeholder="Search Imgur for your favorite images"
       />
-      <button> Search Imgur!</button>
+      <button>Search Imgur!</button>
     </form>
   </div>
 );
