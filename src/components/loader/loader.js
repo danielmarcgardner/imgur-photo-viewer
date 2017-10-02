@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../App.css';
 
 const Loader = ({ fetching, searchForImages, searchTerm, noImagesFound }) => {
@@ -22,6 +23,13 @@ const Loader = ({ fetching, searchForImages, searchTerm, noImagesFound }) => {
       </button>
     </div>
   );
+};
+
+Loader.propTypes = {
+  fetching: PropTypes.bool.isRequired,
+  searchForImages: PropTypes.func.isRequired,
+  searchTerm: PropTypes.string.isRequired,
+  noImagesFound: PropTypes.bool.isRequired,
 };
 
 export default Loader;

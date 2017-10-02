@@ -5,7 +5,7 @@ const NavBar = () => (
   <div id="NavBar">
     <div id="Title">
       <div className="MenuItem">
-        Daniel's Imgur
+        Daniel&apos;s Imgur
       </div>
     </div>
     <div className="NavLinks">

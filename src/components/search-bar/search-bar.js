@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../App.css';
 
 const SearchBar = ({ searchForImages }) => (
@@ -17,5 +18,9 @@ const SearchBar = ({ searchForImages }) => (
     </form>
   </div>
 );
+
+SearchBar.propTypes = {
+  searchForImages: PropTypes.func.isRequired,
+};
 
 export default SearchBar;

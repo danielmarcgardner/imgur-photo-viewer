@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../App.css';
 
 const HeroImage = ({ heroImage, history }) => (
@@ -17,5 +18,19 @@ const HeroImage = ({ heroImage, history }) => (
     </button>
   </div>
 );
+
+
+HeroImage.propTypes = {
+  heroImage: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    score: PropTypes.number.isRequired,
+    datetime: PropTypes.string.isRequired,
+  }).isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default HeroImage;
