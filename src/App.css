@@ -7,10 +7,14 @@ button {
   font-size: 20px;
   margin-top: 5px;
   width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-bottom: 15px;
+  margin: auto;
+  display: flex;
+  margin-bottom: 20px;
   font-size-adjust: auto;
+  max-width: 450px;
+  text-align: center;
+  margin-top: 20px;
+  justify-content: center;
 }
 
 button:hover {
@@ -131,6 +135,7 @@ button:hover {
 #HeroImageContainer {
   margin: auto;
   width: 90%;
+  max-width: 900px;
   height: 750px;
   overflow: scroll;
   border: 2px solid #32C837;
