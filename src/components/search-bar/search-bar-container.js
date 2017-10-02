@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { searchForImages } from '../../redux/actions/thunks';
 import SearchBar from './search-bar';
 
-const mapDispatchToProps = dispatch => bindActionCreators({
+export const mapDispatchToProps = dispatch => bindActionCreators({
   searchForImages,
 }, dispatch);
 

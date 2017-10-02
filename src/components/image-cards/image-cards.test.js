@@ -20,6 +20,7 @@ describe('ImageCard', () => {
         history={history}
       />,
     );
+    expect(component).toMatchSnapshot();
   });
 
   it('When the ImageCard is clicked, history.push is called and with the proper url', () => {

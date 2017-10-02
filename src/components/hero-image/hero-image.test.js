@@ -45,6 +45,18 @@ describe('HeroImage', () => {
     );
     expect(component).toMatchSnapshot();
   });
+  it('Renders with all correct classes', () => {
+    const component = shallow(
+      <HeroImage
+        heroImage={heroImage}
+        history={history}
+      />,
+    );
+    expect(component.find('#HeroImageContainer').length).toBe(1);
+    expect(component.find('#HeroImageHeader').length).toBe(1);
+    expect(component.find('#HeroImage').length).toBe(1);
+    expect(component.find('#HeroTitle').length).toBe(1);
+  });
   it('When button is clicked history.push is called', () => {
     const component = mount(
       <HeroImage

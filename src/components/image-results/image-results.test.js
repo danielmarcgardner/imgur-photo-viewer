@@ -72,6 +72,20 @@ describe('ImageResults', () => {
             datetime: 'Mon Oct 02 2017',
             id: 'fZ8JNw4',
           },
+          {
+            id: 'gzC6hl4',
+            image: 'https://i.imgur.com/gzC6hl4.gif',
+            title: 'Tired Bulldog Dad Needs Break From His Playful Puppies.',
+            score: 39,
+            tags: [],
+            datetime: 'Mon Oct 02 2017',
+          }, {
+            id: 'xE7Yu2v',
+            image: 'https://i.imgur.com/xE7Yu2v.jpg',
+            title: 'Trevor Donovan with his bulldog Tito and German Shepherd Dogbert.',
+            score: 26,
+            tags: ['dogs', 'dog', 'german she…', 'pets'],
+            datetime: 'Mon Oct 02 2017' },
         ],
         searchTerm: 'bulldog',
         fetching: false,
@@ -90,9 +104,23 @@ describe('ImageResults', () => {
           datetime: 'Mon Oct 02 2017',
           id: 'fZ8JNw4',
         },
+        {
+          id: 'gzC6hl4',
+          image: 'https://i.imgur.com/gzC6hl4.gif',
+          title: 'Tired Bulldog Dad Needs Break From His Playful Puppies.',
+          score: 39,
+          tags: [],
+          datetime: 'Mon Oct 02 2017',
+        }, {
+          id: 'xE7Yu2v',
+          image: 'https://i.imgur.com/xE7Yu2v.jpg',
+          title: 'Trevor Donovan with his bulldog Tito and German Shepherd Dogbert.',
+          score: 26,
+          tags: ['dogs', 'dog', 'german she…', 'pets'],
+          datetime: 'Mon Oct 02 2017' },
       ],
       searchTerm: 'bulldog',
     };
-    expect(actual).toBe(expected);
+    expect(actual).toEqual(expected);
   });
 });
