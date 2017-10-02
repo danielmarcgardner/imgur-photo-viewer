@@ -1,10 +1,10 @@
 import React from 'react';
-// import renderIf from 'render-if';
-// import Loading from 'react-loading-animation';
+import renderIf from 'render-if';
 import '../../App.css';
 import ImageCard from '../image-cards/image-cards';
+import Loader from '../loader/loader-container';
 
-const ImageResults = ({ images, fetching }) => (
+const ImageResults = ({ images, searchTerm }) => (
   <div id="ImageResults">
     {images.map(image => (
       <ImageCard
@@ -18,6 +18,11 @@ const ImageResults = ({ images, fetching }) => (
       />
     ))
     }
+    <div id="LoadMoreDiv">
+      {renderIf(searchTerm !== '' || images.length !== 0)(
+        <Loader />,
+      )}
+    </div>
   </div>
 );
 export default ImageResults;

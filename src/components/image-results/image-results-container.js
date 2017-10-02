@@ -3,7 +3,7 @@ import ImageResults from './image-results';
 
 const mapStateToProps = state => ({
   images: state.searchResults.images,
-  fetching: state.searchResults.fetching,
+  searchTerm: state.searchResults.searchTerm,
 });
 
 export default connect(mapStateToProps)(ImageResults);

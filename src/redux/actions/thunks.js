@@ -3,7 +3,7 @@ import imageDataFilter from '../../helpers/image-result-helper';
 
 export const searchForImages = searchTerm => async (dispatch, getState, { Api }) => {
   const currentTerm = getState().searchResults.searchTerm;
-  if (currentTerm === searchTerm || searchTerm === undefined) {
+  if (currentTerm === searchTerm) {
     dispatch({
       type: CONST.SEARCH_AGAIN,
     });

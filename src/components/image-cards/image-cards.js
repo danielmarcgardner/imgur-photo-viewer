@@ -5,9 +5,6 @@ const ImageCard = ({ image, score, title, tags, datetime, id }) => (
   <div className="IndividualCard">
     <div className="ImageHeader">
       <img src={image} alt={id} className="Image" />
-      {/* </div>
-    <div className="TitleSection">
-      <p>{title}</p> */}
     </div>
   </div>
 );

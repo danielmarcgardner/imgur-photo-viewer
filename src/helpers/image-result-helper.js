@@ -1,5 +1,4 @@
 const imageDataFilter = (lotsOfData) => {
-  console.log(lotsOfData);
   const imageArr = [];
   for (let i = 0; i < lotsOfData.length; i++) {
     if (lotsOfData[i].gifv) {

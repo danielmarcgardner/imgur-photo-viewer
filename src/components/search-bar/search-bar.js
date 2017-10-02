@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App.css';
 
-const SearchBar = ({ updateSearchTerm, searchTerm, searchForImages }) => (
+const SearchBar = ({ searchForImages }) => (
   <div id="SearchBar">
     <form onSubmit={(event) => {
       event.preventDefault();
@@ -13,7 +13,7 @@ const SearchBar = ({ updateSearchTerm, searchTerm, searchForImages }) => (
         id="InputBar"
         placeholder="Search Imgur for your favorite images"
       />
-      <button id="SubmitButton"> Search Imgur!</button>
+      <button> Search Imgur!</button>
     </form>
   </div>
 );
