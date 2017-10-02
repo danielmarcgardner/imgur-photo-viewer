@@ -1,15 +1,22 @@
+const dateConverter = (utcSeconds) => {
+  const d = new Date(0);
+  d.setUTCSeconds(utcSeconds);
+  return d.toString();
+};
+
+
 const imageDataFilter = (lotsOfData) => {
   const imageArr = [];
   for (let i = 0; i < lotsOfData.length; i++) {
     if (lotsOfData[i].gifv) {
-      if (!lotsOfData[i].gifv.includes('.gifv')) {
+      if (!lotsOfData[i].link.includes('.gifv')) {
         imageArr.push({
           id: lotsOfData[i].id,
-          image: lotsOfData[i].gifv,
+          image: lotsOfData[i].link,
           title: lotsOfData[i].title,
           score: lotsOfData[i].score,
           tags: lotsOfData[i].tags.map(data => data.display_name),
-          datetime: Date(lotsOfData[i].datetime).slice(0, 15),
+          datetime: dateConverter(lotsOfData[i].datetime).slice(0, 15),
         });
       }
     } else if (lotsOfData[i].images) {
@@ -21,7 +28,7 @@ const imageDataFilter = (lotsOfData) => {
             title: lotsOfData[i].title,
             score: lotsOfData[i].score,
             tags: lotsOfData[i].tags.map(data => data.display_name),
-            datetime: Date(lotsOfData[i].images[j].datetime).slice(0, 15),
+            datetime: dateConverter(lotsOfData[i].images[j].datetime).slice(0, 15),
           });
         }
       }

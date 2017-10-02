@@ -89,4 +89,11 @@ describe('searchResults Reducer', () => {
     const actual = searchResults(initialState, action);
     expect(actual).toEqual(expected);
   });
+  it('Returns the default state with unknown action', () => {
+    const action = {
+      type: 'SOMETHING',
+    };
+    const actual = searchResults(initialState, action);
+    expect(actual).toEqual(initialState);
+  });
 });
