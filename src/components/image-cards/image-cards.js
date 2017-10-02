@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../../App.css';
 
-const ImageCard = ({ image, id, history }) => (
+export const ImageCard = ({ image, id, history }) => (
   <div
     className="IndividualCard"
     onClick={() => history.push(`/hero/${id}`)}
