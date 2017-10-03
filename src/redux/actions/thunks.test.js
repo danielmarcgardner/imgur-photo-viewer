@@ -25,6 +25,7 @@ describe('searchForImages', () => {
         images: [],
         searchTerm: 'bulldog',
         noImages: false,
+        error: false,
       },
     };
 
@@ -61,6 +62,7 @@ describe('searchForImages', () => {
         images: [],
         searchTerm: 'bulldog',
         noImages: false,
+        error: false,
       },
     };
 
@@ -99,6 +101,7 @@ describe('searchForImages', () => {
         images: [],
         searchTerm: 'bulldog',
         noImages: false,
+        error: false,
       },
     };
 
@@ -107,6 +110,44 @@ describe('searchForImages', () => {
         searchTerm: 'asdfghjkjhgfdfghjkjhgf',
       },
       { type: CONST.NO_IMAGES,
+      },
+    ];
+
+    const store = mockStore(currentState);
+
+    store.dispatch(searchForImages('asdfghjkjhgfdfghjkjhgf')).then(() => {
+      expect(store.getActions()).toEqual(expected);
+    });
+  });
+
+  it('searchForImages dispatches correct actions when an error occurs', () => {
+    const imgurSearchMock = jest.fn();
+
+    imgurSearchMock.mockReturnValue(
+      Promise.resolve('error'),
+    );
+
+    const Api = {
+      imgurSearch: imgurSearchMock,
+    };
+    const mockStore = configureStore([thunk.withExtraArgument({ Api })]);
+
+    const currentState = {
+      searchResults: {
+        fetching: false,
+        page: 0,
+        images: [],
+        searchTerm: 'bulldog',
+        noImages: false,
+        error: false,
+      },
+    };
+
+    const expected = [
+      { type: CONST.NEW_SEARCH,
+        searchTerm: 'asdfghjkjhgfdfghjkjhgf',
+      },
+      { type: CONST.ERROR_OCCURED,
       },
     ];
 

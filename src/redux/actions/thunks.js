@@ -16,6 +16,11 @@ export const searchForImages = searchTerm => async (dispatch, getState, { Api })
   }
   const page = getState().searchResults.page;
   const payload = await Api.imgurSearch(currentTerm, page);
+  if (payload === 'error') {
+    return dispatch({
+      type: CONST.ERROR_OCCURED,
+    });
+  }
   const images = imageDataFilter(payload.data);
   if (images.length > 0) {
     dispatch({

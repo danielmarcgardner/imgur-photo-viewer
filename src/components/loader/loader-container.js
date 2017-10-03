@@ -7,6 +7,7 @@ export const mapStateToProps = state => ({
   fetching: state.searchResults.fetching,
   searchTerm: state.searchResults.searchTerm,
   noImagesFound: state.searchResults.noImages,
+  error: state.searchResults.error,
 });
 
 export const mapDispatchToProps = dispatch => bindActionCreators({

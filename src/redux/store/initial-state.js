@@ -4,6 +4,7 @@ const initialState = {
   images: [],
   searchTerm: '',
   noImages: false,
+  error: false,
 };
 
 export default initialState;

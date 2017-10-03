@@ -8,5 +8,8 @@ export const imgurSearch = (searchTerm, page) => {
     },
   })
     .then(response => response.data)
-    .catch(e => console.error(e));
+    .catch((e) => {
+      console.error(e);
+      return 'error';
+    });
 };

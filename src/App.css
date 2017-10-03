@@ -173,7 +173,7 @@ button:hover {
   vertical-align: bottom;
 }
 
-#NotFound {
+.NotFound {
   margin-top: 50px;
   vertical-align: middle;
   text-align: center;

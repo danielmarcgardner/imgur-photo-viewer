@@ -16,6 +16,7 @@ describe('Loader', () => {
         searchForImages={searchForImages}
         searchTerm={'bulldog'}
         noImagesFound={false}
+        error={false}
       />,
     );
     expect(component).toMatchSnapshot();
@@ -27,6 +28,7 @@ describe('Loader', () => {
         searchForImages={searchForImages}
         searchTerm={'bulldog'}
         noImagesFound={false}
+        error={false}
       />,
     );
     expect(component).toMatchSnapshot();
@@ -38,6 +40,19 @@ describe('Loader', () => {
         searchForImages={searchForImages}
         searchTerm={'asdfghjkjhgfdsdfgh'}
         noImagesFound
+        error={false}
+      />,
+    );
+    expect(component).toMatchSnapshot();
+  });
+  it('Renders to page when an error occurs', () => {
+    const component = shallow(
+      <Loader
+        fetching={false}
+        searchForImages={searchForImages}
+        searchTerm={'asdfghjkjhgfdsdfgh'}
+        noImagesFound={false}
+        error
       />,
     );
     expect(component).toMatchSnapshot();
@@ -49,6 +64,7 @@ describe('Loader', () => {
         searchForImages={searchForImages}
         searchTerm={'bulldog'}
         noImagesFound={false}
+        error={false}
       />,
     );
     const component = shallow(
@@ -57,6 +73,7 @@ describe('Loader', () => {
         searchForImages={searchForImages}
         searchTerm={'bulldog'}
         noImagesFound={false}
+        error={false}
       />,
     );
     const componentNoImages = shallow(
@@ -65,11 +82,22 @@ describe('Loader', () => {
         searchForImages={searchForImages}
         searchTerm={'asdfghjkjhgfdsdfgh'}
         noImagesFound
+        error={false}
+      />,
+    );
+    const componentError = shallow(
+      <Loader
+        fetching={false}
+        searchForImages={searchForImages}
+        searchTerm={'bulldog'}
+        noImagesFound
+        error
       />,
     );
     expect(componentFetching.find('#Loading').length).toBe(1);
     expect(component.find('button').length).toBe(1);
-    expect(componentNoImages.find('#NotFound').length).toBe(1);
+    expect(componentNoImages.find('.NotFound').length).toBe(1);
+    expect(componentError.find('.NotFound').length).toBe(1);
   });
   it('When clicked searchForImages is called with the correct search term', () => {
     const component = mount(
@@ -78,6 +106,7 @@ describe('Loader', () => {
         searchForImages={searchForImages}
         searchTerm={'bulldog'}
         noImagesFound={false}
+        error={false}
       />,
     );
     component.find('button').simulate('click');
@@ -114,12 +143,14 @@ describe('Loader', () => {
         searchTerm: 'bulldog',
         fetching: false,
         noImages: false,
+        error: false,
       },
     };
     const expected = {
       searchTerm: 'bulldog',
       fetching: false,
       noImagesFound: false,
+      error: false,
     };
     const actual = mapStateToProps(state);
     expect(actual).toEqual(expected);

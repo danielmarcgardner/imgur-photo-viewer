@@ -28,6 +28,7 @@ describe('searchResults Reducer', () => {
       searchTerm: 'bulldog',
     };
     const expected = {
+      error: false,
       fetching: true,
       page: 0,
       images: [],
@@ -42,6 +43,7 @@ describe('searchResults Reducer', () => {
       type: CONST.NO_IMAGES,
     };
     const expected = {
+      error: false,
       fetching: false,
       page: 0,
       images: [],
@@ -62,9 +64,11 @@ describe('searchResults Reducer', () => {
       images,
       searchTerm: 'bulldog',
       noImages: false,
+      error: false,
     };
 
     const expected = {
+      error: false,
       fetching: true,
       page: 1,
       images,
@@ -74,12 +78,28 @@ describe('searchResults Reducer', () => {
     const actual = searchResults(state, action);
     expect(actual).toEqual(expected);
   });
+  it('Returns the proper state with CONST.ERROR_OCCURED', () => {
+    const action = {
+      type: CONST.ERROR_OCCURED,
+    };
+    const expected = {
+      error: true,
+      fetching: false,
+      page: 0,
+      images: [],
+      searchTerm: '',
+      noImages: false,
+    };
+    const actual = searchResults(initialState, action);
+    expect(actual).toEqual(expected);
+  });
   it('Returns the proper state with CONST.IMGUR_SEARCH', () => {
     const action = {
       type: CONST.IMGUR_SEARCH,
       images,
     };
     const expected = {
+      error: false,
       fetching: false,
       page: 1,
       images,
