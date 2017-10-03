@@ -1,0 +1,23 @@
+extends: airbnb
+plugins:
+  - react
+  - jsx-a11y
+  - import
+rules:
+  react/jsx-filename-extension:
+    - 1
+    - extensions:
+      - ".js"
+      - ".jsx"
+  import/no-unresolved:
+    - 1
+  react/prop-types:
+    - 1
+  jsx-a11y/img-has-alt:
+    - 0
+  jsx-a11y/no-static-element-interactions:
+    - 0
+  global-require:
+    - 0
+env:
+  browser: true

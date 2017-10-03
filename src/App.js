@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import SearchBar from './components/search-bar/search-bar-container';
+import NavBar from './components/nav-bar/nav-bar';
+import ImageResults from './components/image-results/image-results-container';
+import HeroImage from './components/hero-image/hero-image-container';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <BrowserRouter>
+    <div>
+      <Route path="/" component={NavBar} />
+      <Route exact path="/" component={SearchBar} />
+      <Route exact path="/" component={ImageResults} />
+      <Route path="/hero/:id" component={HeroImage} />
+    </div>
+  </BrowserRouter>
+);
 
 export default App;

@@ -1,28 +1,180 @@
-.App {
+/*General stylings*/
+button {
+  background: #32C837;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  margin-top: 5px;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  margin-bottom: 20px;
+  font-size-adjust: auto;
+  max-width: 450px;
+  text-align: center;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/*NavBar Styling*/
+#NavBar {
+  min-height: 50px;
+  background-color: #34373C;
+  height: fit-content;
+}
+
+.MenuItem {
+  vertical-align: middle;
+  line-height: 50px;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  display: inline;
+  color: #32C837;
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+#Title {
+  margin-left: 2.5%;
+  float: left;
+}
+
+.NavLinks {
+  float: right;
+  margin-right: 5%;
+}
+
+/*Search Bar Styling*/
+
+#SearchBar {
+  margin: auto;
+  width: 50%;
+  margin-top: 25px;
+}
+
+#InputBar {
+  width: 100%;
+  border: 2px solid #34373C;
+  font-family: 'Oswald', sans-serif;
+  color: #86888c;
+  border-radius: 4px;
+  padding-left: 30px;
+  background-image: url('./assets/search-icon.svg');
+  background-repeat: no-repeat;
+  height: 30px;
+  font-size: 18px;
+}
+
+/*Styling for the Image Results*/
+
+#ImageResults {
+  margin-top: 15px;
+  height: 1000px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: scroll;
+}
+
+#LoadMoreDiv {
+  height: 100px;
+  width: 100%;
+  display: absolute;
+  clear:both;
+}
+/*Individual Image Card Styling*/
+
+.IndividualCard {
+  width: 250px;
+  height: 360px;
+  margin: auto;
+  border: 2px solid #32C837;
+  background-color: #34373C;
+  margin-top: 5px;
+}
+
+.IndividualCard:hover {
+  cursor: pointer;
+}
+
+.Image {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.ImageHeader {
+  width: 240px;
+  height: 350px;
+  margin: 5px;
+}
+
+/*Styling for Loader*/
+#Loading {
+  width:100%;
+  height: 100%;
+  font-family: 'Oswald', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/*Hero Image Styling*/
+
+#HeroImageContainer {
+  margin: auto;
+  width: 90%;
+  max-width: 900px;
+  height: 750px;
+  overflow: scroll;
+  border: 2px solid #32C837;
+  background-color: #34373C;
+  margin-top: 50px;
+  color: #32C837;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#HeroImageHeader {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  margin-top: 25px;
+  text-align: center;
 }
 
-.App-title {
-  font-size: 1.5em;
+#HeroImage {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.App-intro {
-  font-size: large;
+#HeroTitle {
+  font-size: 36px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#HeroImageContainer > p {
+  margin: 5px
+}
+
+#HeroImageContainer > button {
+  vertical-align: bottom;
+}
+
+.NotFound {
+  margin-top: 50px;
+  vertical-align: middle;
+  text-align: center;
 }
